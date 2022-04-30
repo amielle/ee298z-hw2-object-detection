@@ -20,11 +20,11 @@ def download_files():
     for filename in downloadable_files:
         try:
             gdrive_download(downloadable_files[filename], filename)
-        except:
+        except Exception as e:
             print(f"Unable to download '{filename}' from source link '{downloadable_files[filename]}'.")
+            print(e)
 
-
-def setup_files(dataset_filename="drinks.tar.gz", unzip_dataset=True):
+def setup_files(dataset_filename="drinksasds.tar.gz", unzip_dataset=True):
     download_files()
 
     if unzip_dataset == False: return
@@ -34,5 +34,6 @@ def setup_files(dataset_filename="drinks.tar.gz", unzip_dataset=True):
         tar = tarfile.open(dataset, "r:gz")
         tar.extractall()
         tar.close()
-    except:
-        print("Unable to extract dataset file '{dataset_filename}'.")
+    except Exception as e:
+        print(f"Unable to extract dataset file '{dataset_filename}'.")
+        print(e)
