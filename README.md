@@ -3,7 +3,7 @@
 ![download (1)](https://user-images.githubusercontent.com/43136926/166107742-36f33e6c-6c62-4099-8adb-bbb3adf6335f.png)
 ![download (2)](https://user-images.githubusercontent.com/43136926/166107743-f2c6c717-ce8a-4a1e-b2f1-98621efbe128.png)
 
-<sup>Sample predictions of the model on test set images</sup>
+<sup>Sample predictions of the model on test set images. Prediction threshold in this sample is set to 0.9 to better filter out false cases or less confident predictions.</sup>
 
 The following repository trains a model using a pre-trained [Faster R-CNN](https://arxiv.org/abs/1506.01497) torch model for object detection. The model is fine-tuned using the [Drinks Dataset](https://github.com/roatienza/Deep-Learning-Experiments/blob/master/versions/2022/datasets/python/dataloader_demo.ipynb) and is used to determine the bounding boxes and class of the detected drink. The main classes to be detected by the model are **Summit** (water bottle), **Coke** (red soda can), and **Pine Juice** (green pineapple juice in can.)
 
