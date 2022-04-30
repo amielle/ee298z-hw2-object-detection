@@ -1,6 +1,5 @@
 # Assignment 2: Object Detection for EE 298Z Deep Learning (a.dulay)
 
-![download](https://user-images.githubusercontent.com/43136926/166107741-59c39fa8-a889-4f6e-9582-4cc4fe98cb40.png)
 ![download (1)](https://user-images.githubusercontent.com/43136926/166107742-36f33e6c-6c62-4099-8adb-bbb3adf6335f.png)
 ![download (2)](https://user-images.githubusercontent.com/43136926/166107743-f2c6c717-ce8a-4a1e-b2f1-98621efbe128.png)
 
