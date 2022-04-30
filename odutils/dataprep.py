@@ -18,13 +18,18 @@ def gdrive_download(url, filename):
 
 def download_files():
     for filename in downloadable_files:
+        if os.path.exists(f"{os.getcwd()}/{filename}"):
+            print(f"{filename} exists locally. Skipping download.")
+            continue
+
         try:
             gdrive_download(downloadable_files[filename], filename)
         except Exception as e:
             print(f"Unable to download '{filename}' from source link '{downloadable_files[filename]}'.")
             print(e)
 
-def setup_files(dataset_filename="drinksasds.tar.gz", unzip_dataset=True):
+
+def setup_files(dataset_filename="drinks.tar.gz", unzip_dataset=True):
     download_files()
 
     if unzip_dataset == False: return
