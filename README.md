@@ -10,7 +10,7 @@ The following repository trains a model using a pre-trained [Faster R-CNN](https
 
 ## 1. Usage guide
 
-The main scripts in the repository can be setup on a personal machine to **Run locally** or online to **Run on Kaggle**. It is suggested to go for the latter if there are issues with setting up the pre-requisites. Ensure that there is enough free disk space (~3GB) to properly store the dataset and model. The scripts automatically download both the dataset and the pre-trained model upon execution via `gdown`.
+The main scripts in the repository can be setup on a personal machine to **Run locally** or online to **Run on Kaggle**. It is suggested to go for the latter if there are issues with setting up the pre-requisites. Ensure that there is enough free disk space (~3GB) to properly store the dataset and model. The scripts (train.py and test.py) automatically download both the dataset and the pre-trained model during runtime.
 
 ### - Run locally
 
@@ -36,7 +36,9 @@ python test.py
 
 ### - Run on Kaggle
 
-1. Register and [log in to Kaggle](https://www.kaggle.com/) to get access custom environment preferences.
+**NOTE:** The notebook runs train.py and test.py as scripts to simulate running on personal machines. Additionally, it also contains sample code for plotting predictions on some test set images.
+
+1. Register and [log in to Kaggle](https://www.kaggle.com/) to access custom environment preferences.
 2. Go to the [Kaggle notebook](https://www.kaggle.com/amielle/ee298z-hw2-object-detection/notebook). Press the "Copy & Edit" button. 
 3. Start up the notebook and run with a GPU accelerator and with internet settings toggled on. The settings on the right panel should be similar to the image below:
 
