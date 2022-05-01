@@ -115,9 +115,7 @@ def load_model(od_trained_model=None, num_classes=4, model_basename="fasterrcnn_
         od_trained_model = f"{model_dir}/{model_basename}.pth"
         if not os.path.exists(od_trained_model):
             # change to original fine-tuned model from repo author
-            model_name = default_model_name
-
-        od_trained_model = f"{model_dir}/{model_basename}.pth"
+            od_trained_model = f"{model_dir}/{default_model_name}.pth"
 
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     model = create_model(num_classes=num_classes).to(device)
@@ -141,6 +139,7 @@ def preprocess_frame(image):
     # add batch dimension
     image = torch.unsqueeze(image, 0)   
     return image
+
 
 def detect_drinks(model, filename=None, detection_threshold=0.8, read_from_file=True, image=None, to_plot=True):
     # lowest value found at around ~0.8, adjust to lower value to 'capture more'/higher allowance
