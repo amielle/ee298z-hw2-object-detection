@@ -84,7 +84,7 @@ def create_model(num_classes):
     return model
 
 
-def save_model(model_basename="fasterrcnn_resnet50_fpn", model_dir=os.getcwd(), is_timebased=False):
+def save_model(model, model_basename="fasterrcnn_resnet50_fpn", model_dir=os.getcwd(), is_timebased=False):
     model_name = model_basename
     if is_timebased:
         model_name += f"-{time.time()}"
