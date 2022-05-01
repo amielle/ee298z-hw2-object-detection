@@ -12,6 +12,8 @@ import detection.utils as utils
 from detection.engine import train_one_epoch, evaluate
 
 if __name__ == "__main__":
+    main_dir = os.getcwd()
+
     # Download dataset and pre-trained model
     dataprep.setup_files(dataset_filename="drinks.tar.gz", 
                          unzip_dataset=True)
@@ -30,7 +32,7 @@ if __name__ == "__main__":
                              collate_fn=utils.collate_fn)
     
     # Change as needed
-    model_path = f"{os.getcwd()}/adulay-fasterrcnn_resnet50_fpn-1651304089.3776634.pth"
+    model_path = f"{main_dir}/adulay-fasterrcnn_resnet50_fpn-1651304089.3776634.pth"
     model = odmodel.load_model(od_trained_model=model_path)
     
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
