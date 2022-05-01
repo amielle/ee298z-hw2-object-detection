@@ -8,6 +8,7 @@ import time
 import torchvision
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
 
+import os
 import sys
 import cv2
 import matplotlib.pyplot as plt
