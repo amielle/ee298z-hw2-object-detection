@@ -116,14 +116,16 @@ def load_model(od_trained_model=None, num_classes=4, model_basename="fasterrcnn_
         if not os.path.exists(od_trained_model):
             # change to original fine-tuned model from repo author
             od_trained_model = f"{model_dir}/{default_model_name}.pth"
-
+        
+    print(f"Loading model from '{od_trained_model}'...")
     device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
     model = create_model(num_classes=num_classes).to(device)
     model.load_state_dict(torch.load(
         od_trained_model, map_location=device
     ))
     model.eval()
-    
+    print("Set model to inference mode.")
+
     return model
 
 
