@@ -37,7 +37,7 @@ python test.py
 ### - Run on Kaggle
 
 1. Register and [log in to Kaggle](https://www.kaggle.com/) to get access custom environment preferences.
-2. Go to the [Kaggle notebook](https://www.kaggle.com/amielle/ee298z-hw2-object-detection). Press the "Copy & Edit" button. 
+2. Go to the [Kaggle notebook](https://www.kaggle.com/amielle/ee298z-hw2-object-detection/notebook). Press the "Copy & Edit" button. 
 3. Start up the notebook and run with a GPU accelerator and with internet settings toggled on. The settings on the right panel should be similar to the image below:
 
 ![image](https://user-images.githubusercontent.com/43136926/166148981-626ce855-03f2-44b2-9731-83d556fbc8f6.png)
@@ -55,7 +55,8 @@ The `ntbk` folder contains the initial exploratory code. The notebooks in the di
 * ntbks/ee298z-assignment-2-object-detection-video-gen.ipynb
   * Contains code for the loading the trained model, readings frames from a video file, and applying the object detection model to detect the location of the drinks in the image and the corresponding classes. 
   * NOTES: Due to the limitation of live camera video feed in Kaggle notebooks, feeding from a video file (.mp4) was the workaround for the demo submission. A demo file is generated with 640x480 resolution and 30 frames per second.
-
+* ee298z-hw2-object-detection.ipynb
+  * Contains the code from the [Kaggle notebook](https://www.kaggle.com/amielle/ee298z-hw2-object-detection/notebook)
 #### Additional references
 * [label_utils](https://github.com/roatienza/Deep-Learning-Experiments/blob/master/versions/2022/datasets/python/label_utils.py) 
 * [Torch vision library usage sample](https://pytorch.org/tutorials/intermediate/torchvision_tutorial.html) 
