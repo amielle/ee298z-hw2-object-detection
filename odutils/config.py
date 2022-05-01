@@ -1,4 +1,7 @@
-dataset_dir = "../input/drinks-dataset/drinks"
+import os
+
+# Change the following values accordingly
+dataset_dir = f"{os.getcwd()}/drinks"
 config = {
     "num_workers": 2,
     "pin_memory": True,
