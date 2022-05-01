@@ -64,12 +64,14 @@ if __name__ == "__main__":
     num_epochs = config["epochs"]
     
     for epoch in range(num_epochs):
-        # train for one epoch, printing every 10 iterations
-        train_one_epoch(model, optimizer, train_loader, device, epoch, print_freq=10)
+        # train for one epoch, printing every 50 iterations
+        train_one_epoch(model, optimizer, train_loader, device, epoch, print_freq=50)
         # update the learning rate
         lr_scheduler.step()
         # evaluate on the test dataset
-        evaluate(model, test_loader, device=device)
+    
+    # Run test evaluation at the end of the training
+    evaluate(model, test_loader, device=device)
     # --------------
 
     odmodel.save_model(model,
