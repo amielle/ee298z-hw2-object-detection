@@ -12,6 +12,8 @@ import detection.utils as utils
 from detection.engine import train_one_epoch, evaluate
 
 if __name__ == "__main__":
+    main_dir = os.getcwd()
+
     # Download dataset and pre-trained model
     dataprep.setup_files(dataset_filename="drinks.tar.gz", 
                          unzip_dataset=True)
@@ -26,7 +28,6 @@ if __name__ == "__main__":
     train_split = odmodel.ImageDataset(train_dict, train_classes, transforms.ToTensor())
     test_split = odmodel.ImageDataset(test_dict, test_classes, transforms.ToTensor())
 
-    # This is approx 95/5 split
     print("Train split len:", len(train_split))
     print("Test split len:", len(test_split))
 
@@ -43,7 +44,6 @@ if __name__ == "__main__":
                              num_workers=config['num_workers'],
                              pin_memory=config['pin_memory'],
                              collate_fn=utils.collate_fn)
-    
     
     # --------------
     # Training code
@@ -76,5 +76,5 @@ if __name__ == "__main__":
 
     odmodel.save_model(model,
                    model_basename="fasterrcnn_resnet50_fpn", 
-                   model_dir=os.getcwd(), 
+                   model_dir=main_dir, 
                    is_timebased=False)
