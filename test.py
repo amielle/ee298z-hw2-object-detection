@@ -25,7 +25,7 @@ if __name__ == "__main__":
     test_split = odmodel.ImageDataset(test_dict, test_classes, transforms.ToTensor())
 
     test_loader = DataLoader(test_split,
-                             batch_size=config['batch_size'],
+                             batch_size=1,
                              shuffle=False,
                              num_workers=config['num_workers'],
                              pin_memory=config['pin_memory'],
