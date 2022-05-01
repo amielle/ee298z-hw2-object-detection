@@ -142,7 +142,7 @@ def preprocess_frame(image):
     image = torch.unsqueeze(image, 0)   
     return image
 
-def detect_drinks(filename, detection_threshold=0.8, read_from_file=True, image=None, to_plot=True):
+def detect_drinks(model, filename=None, detection_threshold=0.8, read_from_file=True, image=None, to_plot=True):
     # lowest value found at around ~0.8, adjust to lower value to 'capture more'/higher allowance
     # default threshold set to 0.8 since 0.75 captures other objects in the background as drinks
     # setting to a higher value (e.g. 0.9) lowers those cases
