@@ -103,7 +103,7 @@ def save_model(model, model_basename="fasterrcnn_resnet50_fpn", model_dir=os.get
 
 
 def load_model(od_trained_model=None, num_classes=4, model_basename="fasterrcnn_resnet50_fpn", model_dir=os.getcwd(),
-               default_model_name="adulay-fasterrcnn_resnet50_fpn-1651304089.3776634.pth"):
+               default_model_name="adulay-fasterrcnn_resnet50_fpn-1651304089.3776634"):
     """
         Sample usage:
         loads model in od_trained_model path : load_model(od_trained_model=<path to trained model w/ actual filename>)
