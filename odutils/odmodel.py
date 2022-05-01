@@ -85,6 +85,7 @@ def create_model(num_classes):
 
 
 def save_model(model_basename="fasterrcnn_resnet50_fpn", model_dir=os.getcwd(), is_timebased=False):
+    model_name = model_basename
     if is_timebased:
         model_name += f"-{time.time()}"
 
@@ -92,8 +93,8 @@ def save_model(model_basename="fasterrcnn_resnet50_fpn", model_dir=os.getcwd(), 
         print(f"Save folder does not exist. Creating directory '{model_dir}' .")
         os.makedirs(model_dir)
 
+    filepath = f"{model_dir}/{model_name}.pth"
     try:
-        filepath = f"{model_dir}/{model_name}.pth"
         torch.save(model.state_dict(), filepath)
         print(f"Saved model to {filepath}")
     except Exception as e:
