@@ -6,6 +6,7 @@ def return_config(data_dir):
         "num_workers": 2,
         "pin_memory": True,
         "batch_size": 8,
+        "epochs": 20,
         "dataset": "drinks",
         "train_split": f"{dataset_dir}/labels_train.csv",
         "test_split": f"{dataset_dir}/labels_test.csv",}
