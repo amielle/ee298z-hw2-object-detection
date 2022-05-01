@@ -21,13 +21,13 @@ import datetime
 import os
 import time
 
-import detection.presets
+import detection.presets as presets
 import torch
 import torch.utils.data
 import torchvision
 import torchvision.models.detection
 import torchvision.models.detection.mask_rcnn
-import detection.utils
+import detection.utils as utils
 from detection.coco_utils import get_coco, get_coco_kp
 from detection.engine import train_one_epoch, evaluate
 from detection.group_by_aspect_ratio import GroupedBatchSampler, create_aspect_ratio_groups
