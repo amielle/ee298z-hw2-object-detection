@@ -1,6 +1,5 @@
 import torch
 import numpy as np
-import label_utils
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from PIL import Image
@@ -12,6 +11,8 @@ import os
 import sys
 import cv2
 import matplotlib.pyplot as plt
+
+import odutils.label_utils as label_utils
 
 class ImageDataset(torch.utils.data.Dataset):
     def __init__(self, dictionary, classes, transform=None):
