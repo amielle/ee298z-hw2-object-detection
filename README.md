@@ -36,7 +36,15 @@ python test.py
 
 ### - Run on Kaggle
 
-Alternatively, it's also possible to run the code online. A sample method is given under this section but it is also possible to apply the same ideas for [running on colab](https://colab.research.google.com/?utm_source=scs-index).
+1. Register and [log in to Kaggle](https://www.kaggle.com/) to get access custom environment preferences.
+2. Go to the [Kaggle notebook](https://www.kaggle.com/amielle/ee298z-hw2-object-detection). Press the "Copy & Edit" button. 
+3. Start up the notebook and run with a GPU accelerator and with internet settings toggled on. The settings on the right panel should be similar to the image below:
+
+![image](https://user-images.githubusercontent.com/43136926/166148981-626ce855-03f2-44b2-9731-83d556fbc8f6.png)
+
+3. Run all the cells
+
+A sample method is given under this section but it is also possible to apply the same ideas for [running on colab](https://colab.research.google.com/?utm_source=scs-index).
 
 ## 2. Other information
 
