@@ -1,11 +1,12 @@
-import os
+def return_config(data_dir):
+    dataset_dir = f"{data_dir}/drinks"
 
-# Change the following values accordingly
-dataset_dir = f"{os.getcwd()}/drinks"
-config = {
-    "num_workers": 2,
-    "pin_memory": True,
-    "batch_size": 8,
-    "dataset": "drinks",
-    "train_split": f"{dataset_dir}/labels_train.csv",
-    "test_split": f"{dataset_dir}/labels_test.csv",}
+    # Change the following values accordingly
+    config = {
+        "num_workers": 2,
+        "pin_memory": True,
+        "batch_size": 8,
+        "dataset": "drinks",
+        "train_split": f"{dataset_dir}/labels_train.csv",
+        "test_split": f"{dataset_dir}/labels_test.csv",}
+    return config
