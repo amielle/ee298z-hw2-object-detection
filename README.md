@@ -10,7 +10,7 @@ The following repository trains a model using a pre-trained [Faster R-CNN](https
 
 ## 1. Usage guide
 
-The main scripts in the repository can be setup on a personal machine to **Run locally** or online to **Run on Kaggle**. It is suggested to go for the latter if there are issues with setting up the pre-requisites. Ensure that there is enough free disk space (~3GB) to properly store the dataset and model.
+The main scripts in the repository can be setup on a personal machine to **Run locally** or online to **Run on Kaggle**. It is suggested to go for the latter if there are issues with setting up the pre-requisites. Ensure that there is enough free disk space (~3GB) to properly store the dataset and model. The scripts automatically download both the dataset and the pre-trained model upon execution via `gdown`.
 
 ### - Run locally
 
